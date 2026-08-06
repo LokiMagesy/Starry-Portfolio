@@ -1,0 +1,110 @@
+.navbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    width: 100%;
+    backdrop-filter: blur(16px);
+    background-color: hsl(var(--primary-color)/40);
+}
+
+.first {
+    margin-left: auto;
+    margin-right: auto;    
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    max-width: 80rem;
+}
+
+.second {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;  
+    padding-bottom: 0.5rem;
+}
+
+a {
+    font-size: 1.25rem; /* text-xl (20px) */
+    line-height: 1.75rem;
+    font-weight: 700; /* font-bold */
+    color: #a3a3a3; /* text-neutral-400 (Tailwind neutral-400 hex) */
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms; /* transition-colors */
+}
+a:hover {
+  color: #ffffff; /* hover:text-white */
+}
+
+button.menu {
+    display: flex;
+    cursor: pointer;
+    background-color: #030411;
+    border: #030411; 
+    color: #a3a3a3;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+button.menu:hover {
+  color: #ffffff; /* hover:text-white */
+}
+
+button.menu:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.navbar-win {
+    display: none;
+}
+
+.sidenav-nav-ul {
+    display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.sidenav-nav-li {
+    display: list-item;
+}
+.sidenav-nav-link {
+text-decoration: none;
+  color: #a3a3a3; /* Neutral gray text */
+  font-weight: 500;
+  transition: color 0.15s ease-in-out;
+}
+
+.sidenav-nav-link:hover {
+    color: #ffffff;
+}
+.mobile-nav {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+.navbar-mobile {
+    padding-bottom: 1.25rem;
+}
+@media (min-width: 640px) {
+    .first {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .second {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    button.menu {
+        display: none;
+    }
+    .navbar-win {
+        display: flex;
+    }
+    .mobile-nav {
+        display: none;
+    }
+}
+

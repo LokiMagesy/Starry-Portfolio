@@ -1,0 +1,48 @@
+<div class="navbar">
+    <div class="first">
+        <div class="second">
+            <a href="/">Loki</a>
+
+            <button class="menu" mat-icon-button [matMenuTriggerFor]="menu" (menuOpened)="isMenuOpen = true" 
+        (menuClosed)="isMenuOpen = false" aria-label="icon-button with a menu">
+                <mat-icon>{{ isMenuOpen ? 'close' : 'menu' }}</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>dialpad</mat-icon>
+                    <span>Redial</span>
+                </button>
+                <button mat-menu-item disabled>
+                    <mat-icon>voicemail</mat-icon>
+                    <span>Check voice mail</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>notifications_off</mat-icon>
+                    <span>Disable alerts</span>
+                </button>
+            </mat-menu>
+
+            <nav class="navbar-win">
+                <ul class="sidenav-nav-ul">
+                    <li *ngFor="let item of items" class="sidenav-nav-li">
+                        <a class="sidenav-nav-link" [routerLink]="item.routeLink">
+                        <mat-icon class="sidenav-link-icon">{{item.icon}}</mat-icon>  {{item.label}}
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+        </div>
+    </div>
+                <div class="mobile-nav">
+                <nav class="navbar-mobile">
+                <ul>
+                    <li *ngFor="let item of items" class="">
+                        <a class="sidenav-nav-link" [routerLink]="item.routeLink">
+                        <mat-icon class="sidenav-link-icon">{{item.icon}}</mat-icon>  {{item.label}}
+                        </a>
+                    </li>
+                </ul>
+                </nav>
+            </div>
+</div>
