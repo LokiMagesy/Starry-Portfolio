@@ -1,0 +1,62 @@
+<div class="hero-container">
+  
+  <!-- Desktop View -->
+  <div class="hero-desktop c-space">
+    <h1 
+      class="hero-title" 
+      [@slideIn]="{ value: '', params: { delay: 1000 } }">
+      Hi I'm Ali
+    </h1>
+    <div class="hero-desktop-content">
+      <p 
+        class="hero-subtitle-large" 
+        [@slideIn]="{ value: '', params: { delay: 1200 } }">
+        A Developer <br /> Dedicated to Crafting
+      </p>
+      
+      <div [@slideIn]="{ value: '', params: { delay: 1500 } }">
+        <!-- Passing a standard CSS class instead of Tailwind strings -->
+        <app-flip-words
+          [words]="words"
+          customClass="flip-words-desktop">
+        </app-flip-words>
+      </div>
+
+      <p 
+        class="hero-subtitle-medium" 
+        [@slideIn]="{ value: '', params: { delay: 1800 } }">
+        Web Solutions
+      </p>
+    </div>
+  </div>
+
+  <!-- Mobile View -->
+  <div class="hero-mobile">
+    <p 
+      class="hero-title" 
+      [@slideIn]="{ value: '', params: { delay: 1000 } }">
+      Hi, I'm Ali
+    </p>
+    <div>
+      <p 
+        class="hero-mobile-subtitle-large" 
+        [@slideIn]="{ value: '', params: { delay: 1200 } }">
+        Building
+      </p>
+      
+      <div [@slideIn]="{ value: '', params: { delay: 1500 } }">
+        <app-flip-words
+          [words]="words"
+          customClass="flip-words-mobile">
+        </app-flip-words>
+      </div>
+
+      <p 
+        class="hero-mobile-subtitle-medium" 
+        [@slideIn]="{ value: '', params: { delay: 1800 } }">
+        Web Applications
+      </p>
+    </div>
+  </div>
+
+</div>

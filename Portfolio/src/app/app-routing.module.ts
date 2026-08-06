@@ -3,12 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [];
 
-import { NavbarComponent } from './components/navbar.component';
 
-import { HeroComponent } from './components/hero.component';
-
-import { AboutComponent } from './components/about.component';
-
+import { HerotextComponent } from './components/HeroText/HeroText.component';
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
