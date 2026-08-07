@@ -23,6 +23,9 @@
 .hero-desktop {
   display: none; /* hidden (by default on mobile) */
   flex-direction: column;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -49,12 +52,6 @@
   .hero-mobile {
     display: none; /* md:hidden */
   }
-}
-
-/* Custom Spacing Utility */
-.c-space {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 /* --- Typography --- */
