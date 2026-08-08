@@ -1,0 +1,200 @@
+.section-about {
+  /* c-space */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  /* section-spacing */
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.text-heading {
+  font-size: 2.25rem; /* text-4xl equivalent */
+  line-height: 2.5rem;
+  font-weight: 700;    /* font-bold */
+  color: #ffffff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1rem; /* gap-4 */
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 18rem);
+  }
+  .grid-1 {
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+}
+
+.grid-2 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+}
+
+.grid-3 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.grid-4 {
+    grid-row-start: 3;
+}
+
+.grid-5 {
+    grid-column: span 3 / span 3;
+    grid-row-start: 3;
+}
+}
+
+
+/* --- Container Layout --- */
+.grid-card-container {
+  background-color: #232542;
+  display: flex;
+  align-items: flex-end; /* items-end */
+  position: relative;
+  overflow: hidden; /* Added to clip absolute elements like scale/image bounds */
+  /* Note: Include your custom class properties for .grid-default-color and .grid-1 here */
+
+  padding: 20px;
+}
+
+/* --- Image Absolute Positioning & Scaling --- */
+.grid-card-image {
+  position: absolute;
+    transform: scale(0.7);
+    right: -25rem;
+    top: -17rem;
+  transition: transform 0.3s ease;
+
+}
+
+@media (min-width: 768px) {
+  .grid-card-image {
+    transform: scale(3); /* md:scale-[3] */
+    left: 12.5rem; /* md:left-50 (assuming 50 units = 200px / 12.5rem) */
+    top: auto;
+    right: auto;
+    /* md:inset-y-10 equivalent: */
+    top: 2.5rem; 
+    bottom: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-card-image {
+    transform: scale(2.5); /* lg:scale-[2.5] */
+  }
+}
+
+/* --- Content Wrapper --- */
+.grid-card-content {
+  position: relative;
+  z-index: 10; /* z-10 */
+
+}
+
+mat-card-subtitle, mat-card-title {
+  color: white;
+}
+
+/* --- Gradient Overlay --- */
+.grid-card-gradient {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1rem; /* -bottom-4 */
+  height: 50%; /* h-1/2 */
+  pointer-events: none; /* pointer-events-none */
+  background: linear-gradient(to top, var(--indigo-color, #4f46e5), transparent); /* from-indigo */
+}
+
+@media (min-width: 640px) {
+  .grid-card-gradient {
+    height: 33.333%; /* sm:h-1/3 */
+  }
+}
+
+
+/* Base Card Grid Item */
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  box-shadow: none !important; /* Optional: overrides Material's default shadow if you prefer flat bento boxes */
+  border-radius: 1rem;
+}
+
+/* --- Grid 1 Styles --- */
+
+
+/* --- Grid 2 Styles --- */
+.grid-2-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.code-is-craft {
+  display: flex;
+  align-items: flex-end;
+  font-size: 3rem; /* text-5xl */
+  line-height: 1;
+  color: #6b7280; /* text-gray-500 */
+}
+
+/* --- Grid 3 Styles --- */
+.half-width {
+  width: 50%;
+}
+
+.globe-figure {
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  margin: 0;
+}
+
+/* --- Grid 4 Styles --- */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Grid 5 Styles --- */
+.frameworks-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  left: 50%; /* inset-inline-start 50% */
+}
+
+@media (min-width: 768px) {
+  .frameworks-container {
+    top: 2.25rem; /* md:inset-y-9 */
+    bottom: 2.25rem;
+    transform: scale(1.25);
+  }
+}
+
+
+
+
+/* Note: Ensure you define `.grid-1`, `.grid-2`, etc., in your global stylesheet to handle column/row spanning (e.g., `grid-column: span 4;` etc.) just as they were set up in your React project. */

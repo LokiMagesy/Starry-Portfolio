@@ -1,0 +1,37 @@
+/* Base draggable styles & Framer Motion hover equivalent */
+.draggable-card {
+  position: absolute;
+  cursor: grab;
+  /* Using the independent scale property avoids conflict with CDK's transform */
+  transition: scale 0.2s ease-in-out;
+}
+
+.draggable-card:hover {
+  scale: 1.05;
+}
+
+.draggable-card:active {
+  cursor: grabbing;
+}
+
+/* Equivalent to: w-15 */
+.card-image {
+  width: 3.75rem; 
+}
+
+/* Equivalent to: px-1 py-4 text-xl text-center rounded-full ring ring-gray-700 font-extralight bg-storm w-[12rem] */
+.card-text {
+  padding: 1rem 0.25rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-align: center;
+  border-radius: 9999px;
+  
+  /* Tailwind "ring" is an outer box-shadow */
+  box-shadow: 0 0 0 3px #374151; 
+  font-weight: 200;
+  
+  /* Replace this variable with your actual 'storm' color hex if needed */
+  background-color: var(--storm-color, #2d3748); 
+  width: 12rem;
+}

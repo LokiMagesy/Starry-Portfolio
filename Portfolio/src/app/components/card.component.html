@@ -1,0 +1,20 @@
+<ng-container *ngIf="image && !text; else textBlock">
+  <img
+    class="draggable-card card-image"
+    [src]="image"
+    [ngStyle]="style"
+    cdkDrag
+    [cdkDragBoundary]="containerRef"
+  />
+</ng-container>
+
+<ng-template #textBlock>
+  <div
+    class="draggable-card card-text"
+    [ngStyle]="style"
+    cdkDrag
+    [cdkDragBoundary]="containerRef"
+  >
+    {{ text }}
+  </div>
+</ng-template>

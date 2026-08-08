@@ -11,13 +11,20 @@ import { HeroComponent } from './homepage/Hero/hero.component';
 import { FlipWordsComponent } from './components/FlipWordsComponent';
 import { ParralaxbackgroundComponent } from './components/parralaxBackground.component';
 import { HeroTextComponent } from './components/HeroText.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { AboutComponent } from './homepage/about/about.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CardComponent } from './components/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HeroComponent,
-    ParralaxbackgroundComponent
+    ParralaxbackgroundComponent,
+    AboutComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,10 @@ import { HeroTextComponent } from './components/HeroText.component';
     MatIconModule,
     MatMenuModule,
     FlipWordsComponent,
-    HeroTextComponent
+    HeroTextComponent,
+    MatCardModule,
+    MatButtonModule,
+    DragDropModule,
 ],
   providers: [],
   bootstrap: [AppComponent]
