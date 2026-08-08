@@ -60,6 +60,7 @@
   font-size: 2.25rem; /* text-4xl */
   line-height: 2.5rem;
   font-weight: 500; /* font-medium */
+  color: #d4d4d4;
 }
 
 .hero-subtitle-large {

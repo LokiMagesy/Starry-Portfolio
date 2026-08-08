@@ -8,15 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { HeroComponent } from './homepage/Hero/hero.component';
-import { HeroTextComponent } from "src/app/components/heroText";
 import { FlipWordsComponent } from './components/FlipWordsComponent';
+import { ParralaxbackgroundComponent } from './components/parralaxBackground.component';
+import { HeroTextComponent } from './components/HeroText.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HeroComponent,
-    
+    ParralaxbackgroundComponent
   ],
   imports: [
     BrowserModule,
@@ -24,8 +25,8 @@ import { FlipWordsComponent } from './components/FlipWordsComponent';
     BrowserAnimationsModule,
     MatIconModule,
     MatMenuModule,
-    HeroTextComponent,
-    FlipWordsComponent
+    FlipWordsComponent,
+    HeroTextComponent
 ],
   providers: [],
   bootstrap: [AppComponent]
