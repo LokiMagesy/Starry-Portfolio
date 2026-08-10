@@ -1,0 +1,13 @@
+<button (click)="copyToClipboard()" class="copy-btn">
+  <!-- Absolute positioning prevents layout jumps during the transition, mimicking AnimatePresence mode="wait" -->
+  <div class="copy-btn-wrapper">
+    <p *ngIf="copied" @slideFade class="copy-btn-text">
+      <img src="assets/copy-done.svg" class="copy-btn-icon" alt="copy Icon" />
+      Email has Copied
+    </p> 
+    <p *ngIf="!copied" @fade class="copy-btn-text">
+      <img src="assets/copy.svg" class="copy-btn-icon" alt="copy icon" />
+      Copy Email Address
+    </p>
+  </div>
+</button>

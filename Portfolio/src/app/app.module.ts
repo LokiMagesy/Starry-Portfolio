@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AboutComponent } from './homepage/about/about.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CardComponent } from './components/card.component';
+import { CopyemailbuttonComponent } from './components/copy-email-button.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardComponent } from './components/card.component';
     HeroComponent,
     ParralaxbackgroundComponent,
     AboutComponent,
-    CardComponent
+    CardComponent,
+    CopyemailbuttonComponent
   ],
   imports: [
     BrowserModule,

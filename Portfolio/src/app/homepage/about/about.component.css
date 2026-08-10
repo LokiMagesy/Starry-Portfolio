@@ -14,16 +14,34 @@
   color: #ffffff;
 }
 
-mat-card-subtitle, mat-card-title {
-  color: white;
+mat-card-title {
+  font-size: 1.2rem; 
+  line-height: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+mat-card-subtitle {
+  margin-top: 8px;
+  font-weight: normal;
+  font-size: 0.875rem; 
+  line-height: 1.25rem;
+  color: #a3a3a3; 
 }
 
 .about-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 15rem);
   gap: 1rem; /* gap-4 */
   margin-top: 3rem;
+}
+.about-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 15rem);
+  gap: 1rem; /* gap-4 */
+  margin-top: 1rem;
 }
 /* Base Card Grid Item */
 .grid-item {
@@ -38,6 +56,14 @@ mat-card-subtitle, mat-card-title {
   position: relative;
   z-index: 10; /* z-10 */
 }
+
+.grid-card-footer {
+  position: relative;
+  z-index: 10;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 /* --- Grid 1 Styles --- */
 .grid-1 {
   background-color: #232542;
@@ -61,14 +87,15 @@ mat-card-subtitle, mat-card-title {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -1rem; /* -bottom-4 */
+  bottom: -6rem; /* -bottom-4 */
   height: 50%; /* h-1/2 */
   pointer-events: none; /* pointer-events-none */
-  background: linear-gradient(to top, var(--indigo-color, #4f46e5), transparent); /* from-indigo */
+  background: linear-gradient(to top, indigo, #4f46e5, transparent); /* from-indigo */
+  opacity: 0.8;
 }
 /* --- Grid 2 Styles --- */
 .grid-2 {
-  background-color: #232542;
+  background-image: linear-gradient(45deg, #232542, #282A4B);
 }
 
 .grid-2-container {
@@ -78,6 +105,7 @@ mat-card-subtitle, mat-card-title {
   width: 100%;
   height: 100%;
   position: relative;
+  padding: 20px;
 }
 
 .grid-2-title {
@@ -89,14 +117,14 @@ mat-card-subtitle, mat-card-title {
 }
 /* --- Grid 3 Styles --- */
 .grid-3 {
-    background-color: #252525;
+    background-image: linear-gradient(45deg, #252525, #363636);
 }
 
 .grid-3-container {
+  padding: 20px;
   width: 50%;
   z-index: 10;
 }
-
 
 .globe-figure {
   position: absolute;
@@ -106,7 +134,7 @@ mat-card-subtitle, mat-card-title {
 }
 /* --- Grid 4 Styles --- */
 .grid-4 {
-
+  background-color: #6743D2;
 }
 .contact-container {
   display: flex;
@@ -114,17 +142,22 @@ mat-card-subtitle, mat-card-title {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
+  padding: 20px;
 }
 .grid-4-title {
   text-align: center;
 }
 
 /* --- Grid 5 Styles --- */
+.grid-5 {
+    background-image: linear-gradient(45deg, #232542, #282A4B);
+}
 .grid-5-container {
-    width: 50%;
+  width: 50%;
   z-index: 10;
+  padding: 20px;
 }
 .frameworks-container {
   position: absolute;
@@ -137,9 +170,13 @@ mat-card-subtitle, mat-card-title {
 
 @media (min-width: 768px) {
   .about-grid {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 18rem);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 18rem);
   }
+  .about-grid-2 {
+  grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 18rem);
+}
   .grid-1 {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
@@ -165,12 +202,11 @@ mat-card-subtitle, mat-card-title {
 }
 
 .grid-4 {
-    grid-row-start: 3;
+    grid-column: span 2 / span 2;
 }
 
 .grid-5 {
     grid-column: span 3 / span 3;
-    grid-row-start: 3;
 }
   .frameworks-container {
     top: 2.25rem; /* md:inset-y-9 */
