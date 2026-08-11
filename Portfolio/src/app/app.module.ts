@@ -17,6 +17,11 @@ import { AboutComponent } from './homepage/about/about.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CardComponent } from './components/card.component';
 import { CopyemailbuttonComponent } from './components/copy-email-button.component';
+import {MatDividerModule} from '@angular/material/divider';
+import { ProjectsComponent } from './main/projects.component';
+import { ProjectComponent } from './main/components/project.component';
+import { ContactpageComponent } from './contact/contactPage.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,11 @@ import { CopyemailbuttonComponent } from './components/copy-email-button.compone
     ParralaxbackgroundComponent,
     AboutComponent,
     CardComponent,
-    CopyemailbuttonComponent
+    CopyemailbuttonComponent,
+    ProjectsComponent,
+    ProjectComponent,
+    ContactpageComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +48,7 @@ import { CopyemailbuttonComponent } from './components/copy-email-button.compone
     MatCardModule,
     MatButtonModule,
     DragDropModule,
+    MatDividerModule
 ],
   providers: [],
   bootstrap: [AppComponent]
