@@ -1,0 +1,7 @@
+<section class="section-projects">
+<h2 class="text-heading">My Selected Projects</h2>
+    <mat-divider></mat-divider>
+    <div *ngFor="let item of listProjects">
+        <project-component [projectItem]="item" ></project-component>
+    </div>
+</section>

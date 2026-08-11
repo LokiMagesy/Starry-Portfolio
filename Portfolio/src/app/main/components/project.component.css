@@ -1,0 +1,53 @@
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2.5rem;   /* py-10 */
+    padding-bottom: 2.5rem; /* py-10 */
+}
+
+.project-container > * + * {
+  margin-top: 3.5rem; /* space-y-14 */
+}
+
+.project-title {
+    font-size: 1.5rem;    /* 24px */
+  line-height: 2rem;    /* 32px */
+  color: white;
+}
+
+.project-tags {
+    display: flex;
+  gap: 1.25rem; /* gap-5 (5 * 0.25rem) */
+  margin-top: 0.5rem; /* mt-2 (2 * 0.25rem) */
+  
+  /* Replace with your actual sand color value or CSS variable */
+  color: var(--sand-color, #c2b280);
+}
+
+.project-arrow {
+    width: 1.25rem;
+}
+
+.project-btn {
+    display: flex;
+  align-items: center;
+  gap: 0.25rem; /* gap-1 (1 * 0.25rem) */
+  cursor: pointer;
+}
+
+.project-bt:hover {
+transition: all 0.2s ease-in-out;
+}
+
+@media (min-width: 640px) {
+  .project-container {
+    display: flex; /* sm:flex */
+  }
+
+  /* Resets the vertical spacing on larger screens (sm:space-y-0) */
+  .project-container > * + * {
+    margin-top: 0px;
+  }
+}

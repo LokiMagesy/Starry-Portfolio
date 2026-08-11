@@ -1,0 +1,15 @@
+<div class="project-container">
+    <div>
+        <p class="project-title">{{projectItem.title}}</p>
+        <div class="project-tags">
+        <div *ngFor="let item of projectItem.tags">
+<span id="{{item.id}}">{{item.name}}</span>
+        </div>
+        
+        </div>
+    </div>
+    <button class="project-btn">
+        <img src="assets/arrow-right.svg" class="project-arrow" alt="">
+    </button>
+</div>
+<mat-divider></mat-divider>
