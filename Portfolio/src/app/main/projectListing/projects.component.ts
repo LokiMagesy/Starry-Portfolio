@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { myProjects } from '../shared/info';
+import { myProjects } from '../../shared/info';
 
 @Component({
 selector: 'projects-component',
@@ -14,7 +14,7 @@ constructor() {
 listProjects: project[] = [];
 
 ngOnInit(){
-    this.listProjects = myProjects.map((projectItem) => {
+    this.listProjects = myProjects.map((projectItem:project) => {
       return {
         id: projectItem.id,
         title: projectItem.title,

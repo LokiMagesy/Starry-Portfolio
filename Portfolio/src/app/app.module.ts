@@ -18,11 +18,14 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { CardComponent } from './components/card.component';
 import { CopyemailbuttonComponent } from './components/copy-email-button.component';
 import {MatDividerModule} from '@angular/material/divider';
-import { ProjectsComponent } from './main/projects.component';
+import { ProjectsComponent } from './main/projectListing/projects.component';
 import { ProjectComponent } from './main/components/project.component';
 import { ContactpageComponent } from './contact/contactPage.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ExperienceComponent } from './main/work-exp/experience.component';
+import { TestimonialComponent } from './main/testimon/testimonial.component';
+import { AstronautComponent } from './shared/threeD/astronaut.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProjectsComponent,
     ProjectComponent,
     ContactpageComponent,
-    HomepageComponent
+    HomepageComponent,
+    ExperienceComponent,
+    TestimonialComponent,
+    AstronautComponent
   ],
   imports: [
     BrowserModule,
