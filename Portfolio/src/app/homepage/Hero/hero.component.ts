@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import * as THREE from "three";
 
 @Component({
 selector: 'hero-component',
