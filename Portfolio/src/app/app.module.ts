@@ -22,6 +22,7 @@ import { ProjectsComponent } from './main/projects.component';
 import { ProjectComponent } from './main/components/project.component';
 import { ContactpageComponent } from './contact/contactPage.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     MatCardModule,
     MatButtonModule,
     DragDropModule,
-    MatDividerModule
+    MatDividerModule,
+    ReactiveFormsModule
 ],
   providers: [],
   bootstrap: [AppComponent]

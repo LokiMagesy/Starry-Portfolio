@@ -16,17 +16,17 @@ ngOnInit(){
 isMenuOpen = false;
   items = [
     {
-      routeLink: 'dashboard',
+      routeLink: '/dashboard',
       icon: 'home',
       label: 'Dashboard',
     },
     {
-      routeLink: 'about',
+      routeLink: '/about',
       icon: 'person_pin',
       label: 'about',
     },
     {
-      routeLink: 'work',
+      routeLink: '/work',
       icon: 'work',
       label: 'work',
     },
