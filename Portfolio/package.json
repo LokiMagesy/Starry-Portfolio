@@ -20,9 +20,10 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "@types/three": "^0.185.4",
     "angular-three": "^0.0.2",
     "rxjs": "~7.8.0",
-    "three": "^0.149.0",
+    "three": "^0.185.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },
