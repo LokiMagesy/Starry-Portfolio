@@ -1,0 +1,30 @@
+<div class="project-container">
+  <div>
+    <p class="project-title">
+      {{ projectItem.title }}
+    </p>
+
+    <div class="project-tags">
+      @for (item of projectItem.tags; track item.id) {
+        <div>
+          <span [id]="item.id">
+            {{ item.name }}
+          </span>
+        </div>
+      }
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="project-btn"
+  >
+    <img
+      src="/arrow-right.svg"
+      class="project-arrow"
+      alt=""
+    />
+  </button>
+</div>
+
+<mat-divider></mat-divider>

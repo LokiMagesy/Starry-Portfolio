@@ -3,9 +3,9 @@
   --primary-color: #030411;
   --main-padding: 15px;
 }
-
+html, body { height: 100%; }
 body {
     background-color: var(--primary-color);
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
