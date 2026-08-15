@@ -1,5 +1,4 @@
 {
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"],
-  "html.customData": ["node_modules/angular-three/metadata.json"]
+  "recommendations": ["angular.ng-template"]
 }

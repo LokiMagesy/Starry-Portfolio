@@ -1,0 +1,40 @@
+<button
+  type="button"
+  (click)="copyToClipboard()"
+  class="copy-btn"
+>
+  <!-- Absolute positioning prevents layout jumps during the transition -->
+  <div class="copy-btn-wrapper">
+
+    @if (copied) {
+      <p
+        class="copy-btn-text"
+        animate.enter="slide-fade-enter"
+        animate.leave="slide-fade-leave"
+      >
+        <img
+          src="/copy-done.svg"
+          class="copy-btn-icon"
+          alt="Copy icon"
+        />
+
+        Email has Copied
+      </p>
+    } @else {
+      <p
+        class="copy-btn-text"
+        animate.enter="fade-enter"
+        animate.leave="fade-leave"
+      >
+        <img
+          src="/copy.svg"
+          class="copy-btn-icon"
+          alt="Copy icon"
+        />
+
+        Copy Email Address
+      </p>
+    }
+
+  </div>
+</button>

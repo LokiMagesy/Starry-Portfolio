@@ -1,0 +1,221 @@
+<section class="contact-page">
+
+  <!-- Background -->
+  <div class="contact-background">
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+    <div class="glow glow-three"></div>
+
+    <div class="particles">
+      @for (particle of particles; track $index) {
+        <span></span>
+      }
+    </div>
+
+  </div>
+
+  <!-- Alert -->
+  @if (showAlert) {
+    <div
+      class="alert"
+      [class.alert-success]="alertType === 'success'"
+      [class.alert-danger]="alertType === 'danger'"
+    >
+      <span>{{ alertMessage }}</span>
+
+      <button
+        type="button"
+        class="alert-close"
+        (click)="showAlert = false"
+        aria-label="Close alert"
+      >
+        ×
+      </button>
+    </div>
+  }
+
+  <!-- Contact Card -->
+  <div class="contact-card body-wave">
+
+    <div class="contact-header">
+
+      <span class="contact-eyebrow">
+        GET IN TOUCH
+      </span>
+
+      <h1>
+        Let's Talk
+      </h1>
+
+      <p>
+        Whether you're looking to build a new website, improve your existing
+        platform, or bring a unique project to life, I'm here to help.
+      </p>
+
+    </div>
+
+    <!-- Contact Form -->
+    <form
+      formGroup="contactForm"
+      (ngSubmit)="onSubmit()"
+      novalidate
+    >
+
+      <!-- Name -->
+      <div class="form-group">
+
+        <label for="name">
+          Full Name
+        </label>
+
+        <input
+          id="name"
+          type="text"
+          formControlName="name"
+          placeholder="John Doe"
+          autocomplete="name"
+          [class.invalid]="name?.invalid && name?.touched"
+        />
+
+        @if (name?.invalid && name?.touched) {
+          <small class="field-error">
+
+            @if (name?.errors?.['required']) {
+              <span>
+                Name is required.
+              </span>
+            }
+
+            @if (name?.errors?.['minlength']) {
+              <span>
+                Name must contain at least 2 characters.
+              </span>
+            }
+
+          </small>
+        }
+
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+
+        <label for="email">
+          Email
+        </label>
+
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="johndoe@email.com"
+          autocomplete="email"
+          [class.invalid]="email?.invalid && email?.touched"
+        />
+
+        @if (email?.invalid && email?.touched) {
+          <small class="field-error">
+
+            @if (email?.errors?.['required']) {
+              <span>
+                Email is required.
+              </span>
+            }
+
+            @if (email?.errors?.['email']) {
+              <span>
+                Please enter a valid email address.
+              </span>
+            }
+
+          </small>
+        }
+
+      </div>
+
+      <!-- Message -->
+      <div class="form-group">
+
+        <label for="message">
+          Message
+        </label>
+
+        <textarea
+          id="message"
+          rows="6"
+          formControlName="message"
+          placeholder="Share your thoughts..."
+          maxlength="2000"
+          [class.invalid]="message?.invalid && message?.touched"
+        ></textarea>
+
+        <div class="message-footer">
+
+          @if (message?.invalid && message?.touched) {
+            <small class="field-error">
+
+              @if (message?.errors?.['required']) {
+                <span>
+                  Message is required.
+                </span>
+              }
+
+              @if (message?.errors?.['minlength']) {
+                <span>
+                  Message must contain at least 10 characters.
+                </span>
+              }
+
+            </small>
+          }
+
+          <small class="character-count">
+            {{ message?.value?.length || 0 }}/2000
+          </small>
+
+        </div>
+
+      </div>
+
+      <!-- Submit -->
+      <button
+        type="submit"
+        class="submit-button"
+        [disabled]="isLoading || contactForm.invalid"
+      >
+
+        @if (!isLoading) {
+          <span class="button-content">
+            <span>
+              Send Message
+            </span>
+
+            <span class="arrow">
+              →
+            </span>
+          </span>
+        }
+
+        @if (isLoading) {
+          <span class="button-content">
+
+            <span class="spinner"></span>
+
+            <span>
+              Sending...
+            </span>
+
+          </span>
+        }
+
+      </button>
+
+    </form>
+
+    <div class="wave"></div>
+    <div class="wave"></div>
+
+  </div>
+
+</section>

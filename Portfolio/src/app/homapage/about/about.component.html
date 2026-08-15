@@ -1,0 +1,76 @@
+<section class="section-about" id="about">
+  <h2 class="text-heading">About Me</h2>
+  
+  <div class="about-grid">
+    <!-- Grid 1 -->
+    <mat-card class="grid-item grid-1">
+      <mat-card-header>
+        <img src="/coding-pov.png" class="grid-card-image" alt="Coding POV" />
+      </mat-card-header>      
+      <mat-card-content class="grid-card-content">
+        <mat-card-title>Hi, I'm Ali Sanati</mat-card-title>
+        <mat-card-subtitle>
+          Over the last 4 years, I developed my frontend and backend dev
+          skills to deliver dynamic software and web applications.
+        </mat-card-subtitle>        
+      </mat-card-content>
+            <mat-card-footer class="grid-card-footer">
+             <mat-card-subtitle>Random Quoto of Css Professor</mat-card-subtitle> 
+      <mat-card-subtitle>"You're always working on a group project. Sometimes you're working with one hundred people or with one other person. Sometimes you're working with You in the Future and You in the Past, and don't let You in the Past write awful code You in the Present can't work with. Even by yourself, you're always working on a group project."</mat-card-subtitle>
+      </mat-card-footer>
+      <div class="grid-card-gradient"></div>
+    </mat-card>
+
+    <!-- Grid 2 -->
+    <mat-card class="grid-item grid-2">
+      <mat-card-content class="grid-2-container">
+        <mat-card-title class="grid-2-title">CODE IS CRAFT</mat-card-title>
+        <card-component ngStyle="{ 'rotate': '75deg', 'top': '30%', 'left': '20%' }" text="GRASP" [containerRef]="grid2Container"></card-component>
+        <card-component ngStyle="{ 'rotate': '-30deg', 'top': '60%', 'left': '45%' }" text="SOLID" [containerRef]="grid2Container"></card-component>
+        <card-component ngStyle="{ 'rotate': '90deg', 'bottom': '30%', 'left': '70%' }" text="Design Patterns" [containerRef]="grid2Container"></card-component>
+        <card-component ngStyle="{ 'rotate': '-45deg', 'top': '55%', 'left': '0%' }" text="Design Principles" [containerRef]="grid2Container"></card-component>
+        <card-component ngStyle="{ 'rotate': '20deg', 'top': '10%', 'left': '38%' }" text="SRP" [containerRef]="grid2Container"></card-component>
+        
+        <card-component ngStyle="{ 'rotate': '30deg', 'top': '70%', 'left': '70%' }" image="assets/logos/csharp-pink.png" [containerRef]="grid2Container"></card-component>
+        <card-component ngStyle="{ 'rotate': '-45deg', 'top': '70%', 'left': '25%' }" image="assets/logos/dotnet-pink.png" [containerRef]="grid2Container"></card-component>
+        <card-component ngStyle="{ 'rotate': '-45deg', 'top': '5%', 'left': '10%' }" image="assets/logos/blazor-pink.png" [containerRef]="grid2Container"></card-component>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Grid 3 -->
+    <mat-card class="grid-item grid-3">
+      <div class="grid-3-container">
+        <mat-card-title>Time Zone</mat-card-title>
+        <mat-card-subtitle> I'm based in Mars, and open to remote work worldwide</mat-card-subtitle>
+      </div>
+      <figure class="globe-figure">
+         <!--<app-globe></app-globe>-->
+      </figure>
+    </mat-card>
+  </div>
+  <div class="about-grid-2">
+        <!-- Grid 4 -->
+    <mat-card class="grid-item grid-4">
+      <div class="contact-container">
+        <mat-card-title class="grid-4-title">
+          Do you want to start a project together?
+        </mat-card-title>
+        <copyEmailButton-component></copyEmailButton-component>
+      </div>
+    </mat-card>
+
+    <!-- Grid 5 -->
+    <mat-card class="grid-item grid-5">
+      <div class="grid-5-container content-z-10 half-width">
+        <mat-card-title>Tech Stack</mat-card-title>
+        <mat-card-subtitle> 
+          I specialize in a variety of languages, frameworks, and tools that
+          allow me to build robust and scalable applications.
+        </mat-card-subtitle>
+      </div>
+      <mat-card-content class="frameworks-container">
+         <!--<app-frameworks></app-frameworks> -->
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
