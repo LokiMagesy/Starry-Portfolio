@@ -10,7 +10,9 @@ styleUrls: ['./about.component.css'],
 imports: [CardComponent, MatCardModule, CopyemailbuttonComponent]
 })
 export class AboutComponent implements OnInit {
-@ViewChild('grid2Container') grid2Container!: ElementRef;
+@ViewChild('grid2Container')
+grid2Container!: ElementRef<HTMLElement>;
+
 constructor() {
 }
 

@@ -1,17 +1,23 @@
-@if (image && !text) {
+@if (image() && !text()) {
   <img
     class="draggable-card card-image"
-    ngStyle="style"
+    [style]="style()"
+    [src]="image()"
+    alt=""
     cdkDrag
-    cdkDragBoundary="containerRef"
+    [cdkDragBoundary]="containerRef()"
+    (cdkDragStarted)="onDragStarted()"
+    (cdkDragEnded)="onDragEnded($event)"
   />
 } @else {
   <div
     class="draggable-card card-text"
-    ngStyle="style"
+    [style]="style()"
     cdkDrag
-    cdkDragBoundary="containerRef"
+    [cdkDragBoundary]="containerRef()"
+    (cdkDragStarted)="onDragStarted()"
+    (cdkDragEnded)="onDragEnded($event)"
   >
-    {{ text }}
+    {{ text() }}
   </div>
 }
