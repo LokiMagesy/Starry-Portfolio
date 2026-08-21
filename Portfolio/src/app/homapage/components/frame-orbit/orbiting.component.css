@@ -1,0 +1,72 @@
+:host {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.orbit {
+  position: absolute;
+
+  width: calc(var(--radius) * 2);
+  height: calc(var(--radius) * 2);
+
+  animation:
+    orbit
+    calc(20s / var(--speed))
+    linear
+    infinite;
+}
+
+.orbit.reverse {
+  animation-direction: reverse;
+}
+
+.orbit-icon {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: var(--icon-size);
+  height: var(--icon-size);
+
+  transform:
+    rotate(var(--angle))
+    translateY(calc(var(--radius) * -1))
+    rotate(calc(var(--angle) * -1));
+}
+
+.orbit-icon img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 0.125rem;
+
+  pointer-events: auto;
+
+  transition: transform 200ms ease;
+}
+
+.orbit-icon img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,34 @@
+<div
+  class="globe"
+  [style.--globe-size.px]="size()">
+
+  <div class="globe-wireframe">
+
+    <!-- Longitude / vertical lines -->
+    <div class="meridians">
+      @for (line of meridians; track line) {
+        <span
+          class="meridian"
+          [style.--angle]="(line * 180 / meridians.length) + 'deg'"
+          [style.--hue]="190 + line * 8">
+        </span>
+      }
+    </div>
+
+    <!-- Latitude / horizontal lines -->
+    <div class="latitudes">
+      @for (line of latitudes; track line) {
+        <span
+          class="latitude"
+          [style.--angle]="((line - 4) * 18) + 'deg'"
+          [style.--hue]="190 + line * 10">
+        </span>
+      }
+    </div>
+
+    <!-- Outer glow -->
+    <div class="globe-glow"></div>
+
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+<div
+  class="orbit"
+  [class.reverse]="reverse()"
+  [style.--radius.px]="radius()"
+  [style.--speed]="speed()">
+
+  @for (icon of icons(); track icon; let index = $index) {
+
+    <div
+      class="orbit-icon"
+      [style.--angle]="(360 / icons().length) * index + 'deg'"
+      [style.--icon-size.px]="iconSize()">
+
+      <img
+        [src]="icon"
+        alt=""
+      >
+
+    </div>
+
+  }
+
+</div>
